@@ -1,3 +1,30 @@
 @import "bootstrap";
 @import "bootstrap-icons";
 @import "animate.css";
+
+body {
+    font-family: Ubuntu, sans-serif;
+}
+
+#loader-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .loader {
+        width: 50px;
+        padding: 8px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #2272ea;
+        --_m:
+                conic-gradient(#0000 10%, #1351af),
+                linear-gradient(#2272ea 0 0) content-box;
+        -webkit-mask: var(--_m);
+        mask: var(--_m);
+        -webkit-mask-composite: source-out;
+        mask-composite: subtract;
+        animation: l3 1s infinite linear;
+    }
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
